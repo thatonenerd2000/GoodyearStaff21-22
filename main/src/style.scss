@@ -11,7 +11,8 @@ $buttonFont: 'IBM Plex Sans Thai Looped', sans-serif;
 
 #bg{
     text-align: center;
-    height:100vh;
+    min-height:100vh;
+    height: inherit;
     width:100vw;
     background:linear-gradient(rgba(0,0,0,0.8),rgb(0,0,0,0.8)) , url("./assets/mainBG.jpg");
     background-size: cover;
@@ -22,17 +23,20 @@ $buttonFont: 'IBM Plex Sans Thai Looped', sans-serif;
     font-family:$landingFont;
     color:white;
     position: relative;
-    top:25%;
     font-size: 10vh;
     text-decoration: underline;
 }
 
 #resButtonHolder {
     position: relative;
-    top:25%
 }
 
 #resButtonHolder > h4{
+    color:white;
+    display: inline-block;
+}
+
+#resButtonHolder > h3{
     color:white;
     display: inline-block;
 }
@@ -45,10 +49,12 @@ $buttonFont: 'IBM Plex Sans Thai Looped', sans-serif;
     border: none;
     color:white;
     font-family: $buttonFont;
+    transition:0.2s ease-in-out;
 }
 
-#bg > button:hover{
+.btninfo:hover{
     cursor: pointer;
+    box-shadow:1px 2px white;
 }
 
 #dutyHolder{
@@ -64,4 +70,54 @@ $buttonFont: 'IBM Plex Sans Thai Looped', sans-serif;
     transform:skew(-5deg);
     position:relative;
     left:-10%;
+}
+
+#cpr{
+    color:white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size:10px;
+}
+
+#AuthMain{
+    height:100vh;
+    width:100vw;
+    background-color:#1c2e4a;
+    text-align: center;
+}
+
+#AuthBox{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color:white;
+    padding:30px;
+    border-radius:20px;
+}
+
+#AuthMain h1{
+    font-family: $landingFont;
+}
+
+#AuthMain button {
+    padding: 10px;
+    border-radius:5px;
+    border: none;
+    color:white;
+    font-family: $buttonFont;
+    transition:0.2s ease-in-out;
+    background-color: red;
+}
+
+#loginbtn:hover{
+    cursor: pointer;
+    box-shadow:1px 1px white;
+}
+
+input{
+    width: 200px
 }

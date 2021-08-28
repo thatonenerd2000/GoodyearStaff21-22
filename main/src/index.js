@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-//Components
-import App from "./App"
+import Landing from "./components/Landing.jsx"
+import GlobalContext from "./GlobalContext"
+import Auth from "./components/Auth.jsx"
 
-const Main = () =>{
+const App = ()=>{
   return(
-    <App/>
+    <>
+    <GlobalContext>
+      <Landing/>
+      <Auth/>
+    </GlobalContext>
+    </>
   )
 }
 
-ReactDOM.render(<Main/>,document.getElementById('root'));
+ReactDOM.render(<App/>,document.getElementById('root'));
